@@ -38,5 +38,5 @@
 
     .container
       - flash.each do |key, message|
-        .alert.alert-danger= message
+        %div{class: "alert alert-#{key}"}= message
       = yield

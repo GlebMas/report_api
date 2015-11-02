@@ -1,28 +1,16 @@
-== README
+== Some Little Tech Notes
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Rest API application based on the Platform-161 Rest API
 
-Things you may want to cover:
+The data, which I could not retrieve from Rest API:
 
-* Ruby version
+* AdvertiserReport.gross_revenues => eCPM, eCPA, eCPC
 
-* System dependencies
+* AdvertiserReport.total_campaign_cost => Media Spent
 
-* Configuration
+I implement REST API, that required authentication
+Customer should generate token to retrieve rest data.
+To get that token, you’ll need to run the generate_api_key method on one of your User objects.
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Query to generate report is very long. Such bechavior caused the connecting to the rest api on 
+Platform161 and cached the obtaining data to database.

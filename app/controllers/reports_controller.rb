@@ -22,13 +22,14 @@ class ReportsController < ApplicationController
   end
 
   def show
-    campaign_id = Campaign.find(:params[:campaign_id])
+    campaign_id = Campaign.find(params[:id])
 
     respond_to do |format|
       format.pdf do
-        pdf = Pdf::ReportPdf.new(campaign_id)
-        send_date pdf.render, filename: "status_report_#{campaign_id}",
-                              type: "application/pdf"
+        pdf = Pdf::ReportPdf.new(campaign_id, view_context)
+        send_data pdf.render, filename: "status_report_#{campaign_id}",
+                              type: "application/pdf",
+                              disposition: "inline"
       end
     end
   end
