@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  impressions: 1
+  conversions: 1
+  ctr: 1.5
+  spent: 9.99
+  clicks: 1
+  references: 
+  references: 
+
+two:
+  impressions: 1
+  conversions: 1
+  ctr: 1.5
+  spent: 9.99
+  clicks: 1
+  references: 
+  references: 

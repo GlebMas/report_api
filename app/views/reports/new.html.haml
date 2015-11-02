@@ -1,0 +1,7 @@
+#report-generator
+  %h2 Report Generator
+  = simple_form_for @report, remote: true do |f|
+    = f.input :campaign_id
+    = f.button :submit, "Generate Report", class: "btn btn-primary"
+
+#spinner

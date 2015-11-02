@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  start_date: 2015-10-31 19:06:32
+  end_date: 2015-10-31 19:06:32
+  media_budget: 1.5
+  campaign_manager_id: 1
+
+two:
+  name: MyString
+  start_date: 2015-10-31 19:06:32
+  end_date: 2015-10-31 19:06:32
+  media_budget: 1.5
+  campaign_manager_id: 1

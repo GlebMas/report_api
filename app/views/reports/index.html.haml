@@ -1,0 +1,23 @@
+#history
+  %h2 Report History
+
+  %ul.list-group
+    - @reports.each do |report|
+      %li.list-group-item
+        %p
+          %strong Campaign Id:
+          = " #{report.campaign_id}"
+        %p
+          %strong Date:
+          = " #{report.date.strftime("%b %d, %Y")}"
+
+        %h3 Comments
+        %ul.list-group
+          - report.comments.each do |comment|
+            %li.list-group-item= comment.text
+
+        %h4 New Comment
+        = simple_form_for report.comments.build do |f|
+          = f.input :text
+          = f.input :report_id, as: :hidden
+          = f.button  :submit, "Add Comment", class: "btn btn-primary"
